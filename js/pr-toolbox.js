@@ -92,3 +92,131 @@ function Clearbtn(){
     searchInput.value = "";
     loadToolboxData()
 }
+
+
+
+
+// Rating functionality
+// Import Firebase libraries
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+import { getFirestore, collection, addDoc, getDocs, onSnapshot } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+
+// Firebase configuration
+const firebaseConfig = {
+    apiKey: "AIzaSyBXmymlICJ7iLrXziLKn8I_4MC5aaYEd5U",
+    authDomain: "star-rating-920b0.firebaseapp.com",
+    projectId: "star-rating-920b0",
+    storageBucket: "star-rating-920b0.appspot.com",
+    messagingSenderId: "789068259439",
+    appId: "1:789068259439:web:8771eadc485c9e73492d9a",
+    measurementId: "G-J4EQJ9K82S"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+let currentItemId = null; // Track current item being rated
+const avgDisplay = document.getElementById('avg'); // Modal average rating display
+const ratingsRef = collection(db, 'ratings');
+
+// Open modal and set current item ID when clicking `.ut-rate-btn`
+document.querySelectorAll('.ut-rate-btn').forEach(button => {
+    button.addEventListener('click', (e) => {
+        currentItemId = e.currentTarget.getAttribute('data-item-id'); // Get item ID
+        updateAverageRating();  // Load the current average rating for this item
+    });
+});
+
+// Handle star click for submitting rating
+document.querySelectorAll('.star').forEach(star => {
+    star.addEventListener('click', async (e) => {
+        if (!currentItemId) return; // Ensure an item ID is selected
+        const rating = parseInt(e.target.getAttribute('data-value'));
+        highlightStars(rating);
+        await submitRating(rating, currentItemId);
+        updateAverageRating();
+    });
+});
+
+// Highlight stars up to the given rating
+function highlightStars(rating) {
+    document.querySelectorAll('.star').forEach(star => {
+        star.classList.toggle('selected', parseInt(star.getAttribute('data-value')) <= rating);
+    });
+}
+
+// Submit rating to Firestore with item ID
+async function submitRating(rating, itemId) {
+    try {
+        await addDoc(ratingsRef, { rating: rating, itemId: itemId });
+    } catch (error) {
+        console.error("Error adding rating: ", error);
+    }
+}
+
+// Update average rating based on current item ID
+async function updateAverageRating() {
+    if (!currentItemId) return;
+
+    const snapshot = await getDocs(ratingsRef);
+    let total = 0;
+    let count = 0;
+
+    snapshot.forEach(doc => {
+        if (doc.data().itemId === currentItemId) {
+            total += doc.data().rating;
+            count++;
+        }
+    });
+
+    const average = count === 0 ? "0.0" : (total / count).toFixed(1);
+    
+    // Update the modal's display
+    if (avgDisplay) avgDisplay.textContent = average;
+
+    // Update specific item's display in the rating div
+    const ratingDiv = document.querySelector(`.rating-div[data-item-id="${currentItemId}"] .item-rating`);
+    if (ratingDiv) ratingDiv.textContent = `${average}/5`;
+}
+
+// Update average ratings for all items
+async function updateAllAverageRatings() {
+    const snapshot = await getDocs(ratingsRef);
+    const ratingsByItem = {};
+
+    // Calculate totals and counts for each item
+    snapshot.forEach(doc => {
+        const { itemId, rating } = doc.data();
+        if (!ratingsByItem[itemId]) {
+            ratingsByItem[itemId] = { total: 0, count: 0 };
+        }
+        ratingsByItem[itemId].total += rating;
+        ratingsByItem[itemId].count++;
+    });
+
+    // Update all item ratings in the DOM
+    Object.keys(ratingsByItem).forEach(itemId => {
+        const { total, count } = ratingsByItem[itemId];
+        const average = count === 0 ? "0.0" : (total / count).toFixed(1);
+
+        // Update specific item's display in the rating div
+        const ratingDiv = document.querySelector(`.rating-div[data-item-id="${itemId}"] .item-rating`);
+        if (ratingDiv) ratingDiv.textContent = `${average}/5`;
+    });
+}
+
+// Real-time listener to update rating on new submission
+onSnapshot(ratingsRef, () => {
+    updateAverageRating();
+    updateAllAverageRatings();
+});
+
+// Initial load to display all average ratings on page load
+updateAllAverageRatings();
+
+
+
+
+
+

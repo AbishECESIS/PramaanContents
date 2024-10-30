@@ -289,6 +289,46 @@ button:focus:not(:focus-visible){
     margin-bottom: 20px;
 }
 
+
+/* Rating popup style  */
+#rating-popup .modal-dialog-centered{
+    justify-content: center;
+}
+#rating-popup .modal-body{
+    padding: 0;
+}
+#rating-popup .modal-header{
+    padding: 5px;
+    margin-bottom: 10px;
+}
+#rating-popup .modal-header button{
+    background-size: 12px;
+}
+#rating{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+#rating span{
+    font-size: 32px;
+    cursor: pointer;
+}
+.average-rating{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.star {
+    cursor: pointer;
+    font-size: 30px;
+    color: lightgray;
+}
+.star.selected {
+    color: gold;
+}
+
+
 @media (max-width:1400px) {
     .display-cat-main-div .cat-icon-div{
         width: 20rem;
@@ -408,6 +448,9 @@ button:focus:not(:focus-visible){
     }
     .accordion-button::after{
         right: -5px;
+    }
+    #rating span {
+        font-size: 26px;
     }
 }
 @media (max-width:375px) {
