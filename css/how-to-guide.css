@@ -34,13 +34,13 @@
     border-radius: 8px;
 }
 #guideaccordion .accordion-button:not(.collapsed)::after{
-    background-image: url(../images/pramaan/pr_chevron_icon.png);
+    background-image: url(../images/pr_chevron_icon.png);
     transform:translateY(-50%) rotate(0deg) !important;
     border: none;
     background-size: 24px;
 }
 #guideaccordion .accordion-button::after{
-    background-image: url(../images/pramaan/pr_chevron_icon.png);
+    background-image: url(../images/pr_chevron_icon.png);
     transform: translateY(-50%) rotate(180deg) !important;
     border: none;
     margin: 0;
