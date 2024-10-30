@@ -1,0 +1,34 @@
+[
+    {
+        "id": "124",
+        "name": "ABC Private Limited",
+        "website": "abc-abc.com",
+        "role": "TSP - Buyer,<br> TSP - Seller,<br> TSP - Buyer",
+        "domains_tested": "ONDC: TRV10 - Ride hailing,<br> ONDC: RET10 - Food & Beverages,<br> ONDC: RET11 - F&B",
+        "np_client": "2314 - Ushop (ushop.com),<br> 9081 - xpressbazaar (xpressbazaar.com)"
+    },
+    {
+        "id": "802",
+        "name": "Shopalyst",
+        "website": "xyz.com",
+        "role": "TSP - Buyer",
+        "domains_tested": "ONDC: TRV10 - Ride hailing",
+        "np_client": "2314 - Ushop (ushop.com),<br> 9081 - xpressbazaar (xpressbazaar.com)"
+    },
+    {
+        "id": "456",
+        "name": "TSP-2",
+        "website": "Shipsy.com",
+        "role": "TSP - Buyer",
+        "domains_tested": "nic2004:60232 - Logistics",
+        "np_client": "2314 - Ushop (ushop.com),<br> 9081 - xpressbazaar (xpressbazaar.com)"
+    },
+    {
+        "id": "1576",
+        "name": "Plotch",
+        "website": "Plotch.com",
+        "role": "TSP - Buyer,<br> TSP - Seller",
+        "domains_tested": "ONDC: RET10 - Food & Beverages,<br> ONDC: RET11 - F&B",
+        "np_client": "2319 - MyStore (MyStore.com),<br> 9081 - xpressbazaar (xpressbazaar.com),<br> 5432 - Zypp (Zypp.com)"
+    }
+]

@@ -1,11 +1,340 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preload" href="css/app.css" as="style" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/reset.min.css">
+    <link rel="stylesheet" href="/css/base_v1.css">
+    <link rel="stylesheet" href="/css/main.min.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/custom.css">
+    <link rel="stylesheet" href="/css/pramaan.css">
 </head>
 <body>
-    <h1>welcome to my site</h1>
+<!-- Header Nav Bar -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+        <img src="https://ondc.org/assets/theme/images/ondc_registered_logo.svg" class="header-logo" alt="ONDC | Open Network for Digital Commerce">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav pr-menu-items">
+        <li class="nav-item">
+          <p class="active"><a class="nav-link" aria-current="page" href="#">Home</a></p>
+        </li>
+        <li class="nav-item">
+          <p><a class="nav-link" href="/toolbox.html">Toolbox</a></p>
+        </li>
+        <li class="nav-item">
+          <p><a class="nav-link" href="/how-to-guide.html">How to guide?</a></p>
+        </li>
+        <li class="nav-item">
+          <p><a class="nav-link" href="/find-tsp.html">Find TSPs</a></p>
+        </li>
+        <li class="nav-item">
+          <p><a class="nav-link" href="/pr-videos.html">Videos</a></p>
+        </li>
+        <li class="nav-item">
+          <p><a class="nav-link" href="#need-help">Need help</a></p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Banner Section  -->
+<div class="pramaan-banner-section">
+    <div class="container">
+        <div class="row">
+            <div class="mt-3 mt-sm-0 col-sm-7 col-md-7 d-flex flex-column justify-content-center align-items-start">
+                <p class="pr-bnr-title pb-2 pb-sm-2 pb-lg-3">Pramaan: Your <b>ONDC integration</b> Test Bench</p>
+                <p class="pr-bnr-sub-title pb-2 pb-sm-2 pb-3">Test, Fix, and Accelerate your integration with ONDC network</p>
+                <p class="pr-bnr-sub-cnt pb-2 pb-sm-2 pb-lg-3">ONDC integration test bench is designed to ensure seamless interoperability and complaince with the ONDC protocols. It enables developers to test and validate their ONDC-based applications, services, and integration through defined flows & scenarios.</p>
+                <div class="pr-bnr-btn-div">
+                    <button class="btn pr-bnr-btn" data-bs-toggle="modal" data-bs-target="#start-testing">Start testing</button>
+                    <button class="btn pr-bnr-btn pr-btn-guide" onclick="window.open('/how-to-guide','_self')">How to guide?</button>
+                </div>
+            </div>
+            <div class="col-sm-5 col-md-5">
+                <img class="d-none d-sm-block img-fluid pr-banner-image" src="/images/banner_image.jpg" alt="Banner Image">
+                <img class="d-block d-sm-none  img-fluid pr-banner-image mb" src="/images/banner_image_mb.jpg" alt="Banner Image">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- count section  -->
+<div class="count-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-sm-3 col-md-3 count-div">
+                <div class="count-sub-div">
+                    <p class="count">322+</p>
+                    <p class="count-lable">Unique Subscriber IDs</p>
+                </div>
+            </div>
+            <div class="col-6 col-sm-3 col-md-3 count-div">
+                <div class="count-sub-div">
+                    <p class="count">22+</p>
+                    <p class="count-lable">Categories tested</p>
+                </div>
+            </div>
+            <div class="col-6 col-sm-3 col-md-3 count-div">
+                <div class="count-sub-div">
+                    <p class="count">17038+</p>
+                    <p class="count-lable">Flows tested</p>
+                </div>
+            </div>
+            <div class="col-6 col-sm-3 col-md-3 count-div">
+                <div class="count-sub-div">
+                    <p class="count">4M+</p>
+                    <p class="count-lable">Tests executed</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- why to use Pramaan section  -->
+<div class="why-pramaan-section">
+    <div class="container">
+        <p class="why-pr-title">Why to use Pramaan: ONDC Integration Test Bench?</p>
+        <ul class="why-pr-ul ms-3">
+            <li><p><b>Baseline Test Flows:</b> Pramaan verifies baseline scenarios and flows required to enable operations on ONDC network.</p></li>
+            <li><p><b>Simulation of ONDC Network:</b> Emulates the ONDC network, allowing testing of complex scenarios and businesses cases across APIs.</p></li>
+            <li><p><b>Multi-Protocol Support:</b> Tests integration across live ONDC protocols (e.g., Retail, mobility, logistics, financial services for buyer & seller apps).</p></li>
+            <li><p><b>Real-time Feedback:</b> Provides instant test results, identifying errors and areas for improvement.</p></li>
+            <li><p><b>Regression test suite:</b> You can perform integration check through this regression test suite anytime after go-live.</p></li>
+            <li><p><b>Reduce integration errors:</b> Review Pramaan Integration Report to confirm implementation of baseline flows by other NPs.</p></li>
+        </ul>
+
+        <div class="why-pr-box-div">
+            <div class="row">
+                <div class="why-pr-box col-6 col-sm-4 col-md-4 d-flex flex-column">
+                    <img class="img-fluid pr-box-icon" src="/images/smiple_icon.jpg" alt="Simple">
+                    <p class="pr-box-title"><b>Simple</b></p>
+                    <p class="pr-box-cnt">Easy testing, seamless integration</p>
+                </div>
+                <div class="why-pr-box col-6 col-sm-4 col-md-4 d-flex flex-column">
+                    <img class="img-fluid pr-box-icon" src="/images/fast_icon.jpg" alt="Fast">
+                    <p class="pr-box-title"><b>Fast</b></p>
+                    <p class="pr-box-cnt">Test one or more flows within your software within minutes</p>
+                </div>
+                <div class="why-pr-box col-6 col-sm-4 col-md-4 d-flex flex-column">
+                    <img class="img-fluid pr-box-icon" src="/images/modular_icon.jpg" alt="Modular">
+                    <p class="pr-box-title"><b>Modular</b></p>
+                    <p class="pr-box-cnt">Testing is modular, you can test one or more flows at a time</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- How pramaan works section  -->
+<div class="how-pr-works-section">
+    <div class="container">
+        <p class="why-pr-title how-pr-title">How Pramaan Works?</p>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="how-pr-step-div">
+                    <p class="step-count">Step 1</p>
+                    <p class="step-title"><b>Enable prerequisites are done based on domain</b></p>
+                    <p class="step-cnt">Review prerequisites based on domain. Go through the demo videos to understand how to run and use Pramaan before you begin testing.</p>
+                </div>
+            </div>
+            <div class="mt-2 mt-sm-3 mt-md-0 col-md-6 ">
+                <div class="how-pr-step-div">
+                    <p class="step-count">Step 2</p>
+                    <p class="step-title"><b>Provide details about your Application</b></p>
+                    <p class="step-cnt">Provide subscriber ID as per chosen environment - Staging or Preprod. Details about application & testing configuration to setup the test runs.</p>
+                </div>
+            </div>
+            <div class="mt-2 mt-sm-3 col-md-6 mt-lg-4">
+                <div class="how-pr-step-div">
+                    <p class="step-count">Step 3</p>
+                    <p class="step-title"><b>Run Tests</b></p>
+                    <p class="step-cnt">Follow guided steps to execute tests. There are steps which require actions to be carried out on your application in a time-bound manner.</p>
+                </div>
+            </div>
+            <div class="mt-2 mt-sm-3 col-md-6 mt-lg-4">
+                <div class="how-pr-step-div">
+                    <p class="step-count">Step 4</p>
+                    <p class="step-title"><b>Fix & Repeat</b></p>
+                    <p class="step-cnt">Download and review the report after run and resolve any issues, if found. Re-run after fixing the issues till an all-clear report is generated.</p>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <p class="how-pr-btm-txt mt-4">Successful Pramaan runs get synched with ONDC Participant Portal. You can download consolidated reports from the portal.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Video Section  -->
+<div class="pr-video-section">
+    <div class="container">
+        <p class="why-pr-title pr-vdo-title">How to run and use Pramaan videos</p>
+        <div class="pr-vdo-div row">
+            <div class="mb-2 mb-sm-0 col-6 col-sm-4 col-md-4">
+                <div class="pr-vdo-img-div" data-bs-toggle="modal" data-bs-target="#video-popup"><img class="img-fluid" src="/images/video_thump.jpg" alt="Video Thumpnail"></div>
+                <p class="pr-vdo-cnt">Basic introduction - Pramaan Run</p>
+            </div>
+            <div class="mb-2 mb-sm-0 col-6 col-sm-4 col-md-4">
+                <div class="pr-vdo-img-div" data-bs-toggle="modal" data-bs-target="#video-popup"><img class="img-fluid" src="/images/video_thump.jpg" alt="Video Thumpnail"></div>
+                <p class="pr-vdo-cnt">Review Pramaan Test Report</p>
+            </div>
+            <div class="mb-2 mb-sm-0 col-6 col-sm-4 col-md-4">
+                <div class="pr-vdo-img-div" data-bs-toggle="modal" data-bs-target="#video-popup"><img class="img-fluid" src="/images/video_thump.jpg" alt="Video Thumpnail"></div>
+                <p class="pr-vdo-cnt">Review Pramaan Integration Report</p>
+            </div>
+        </div>
+        <button class="btn more-video-btn" onclick="window.open('/pr-videos','_self')">Watch More Videos</button>
+    </div>
+</div>
+
+
+<!-- Video Model  -->
+<div class="modal fade video-popup" id="video-popup" tabindex="-1" aria-labelledby="video-popupLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content vid-main-div">
+      <div class="modal-header">
+        <!-- <h1 class="modal-title fs-5" id="video-popupLabel">Modal title</h1> -->
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <video class="vid-pop-video" poster="/imagesvideo_thump.jpg" src=""></video>
+        <p class="vid-pop-title">Retail - Buyer NP testing.mov</p>
+        <p class="vid-pop-cnt">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Start testing popup  -->
+<div class="modal fade video-popup" id="start-testing" tabindex="-1" aria-labelledby="start-testingLabel" aria-hidden="false">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content vid-main-div">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="start-testingLabel">Select domain to view prerequisites</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="pre-req-main-section section-show show" id="pre-requistise">
+            <!-- <p class="pre-req-title"></p> -->
+            <p class="pre-req-sub-title">Refer to Toolbox to confirm domains/categories that are LIVE on Pramaan before proceeding</p>
+            <ul class="pre-req-radio-div ms-0">
+                <li>
+                    <input type="radio" id="for-retail" name="domain" value="retail" checked>
+                    <label class="d-flex radio-label" for="for-retail"><p><b>For Retail B2C (Grocery, Food & Beverages, Fashion, Electronic, etc.) & Logistics (B2C)</b></p></label>
+                </li>
+                <li>
+                    <input type="radio" id="for-other" name="domain" value="other">
+                    <label class="d-flex radio-label" for="for-other"><p><b>For ALL OTHER Domains Mobility (Ride hailing, Unreserved & Reserved Ticketing), Financial services, etc.</b></p></label>
+                </li>
+            </ul>
+            <button class="btn pr-bnr-btn pre-req-1st-btn" data-bs-toggle="modal" data-bs-target="#testing-popup">Continue</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Testing iframe  -->
+<div class="modal fade" id="testing-popup" tabindex="-1" aria-labelledby="testingLabel" aria-hidden="false">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <iframe src="https://ondc-testing.sequelstring.com/" width="100%" height="900px"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer Section  -->
+<div class="pr-footer-section" id="need-help">
+    <div class="container">
+        <p class="pr-footer-title">Need Help</p>
+        <div class="row">
+            <div class="mb-4 mb-sm-0 col-sm-4 col-md-4">
+                <p class="pr-f-main-cnt"><b>Slack Channel:</b></p>
+                <p class="pr-f-sub-cnt">Join our Slack channel: #ext-pramaan-qa</p>
+                <button class="join-btn btn">Join Now</button>
+            </div>
+            <div class="mb-4 mb-sm-0 col-sm-4 col-md-4">
+                <p class="pr-f-main-cnt"><b>Email Support</b></p>
+                <p class="pr-f-sub-cnt">Contact us: <a href="mailto:support.pramaan@ondc.org">support.pramaan@ondc.org</a></p>
+            </div>
+            <div class="mb-4 mb-sm-0 col-sm-4 col-md-4">
+                <p class="pr-f-main-cnt"><b>Feedback</b></p>
+                <p class="pr-f-sub-cnt">Share your feedback: <a href="mailto:support.preprod@ondc.org">support.preprod@ondc.org</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="policy-section">
+    <div class="policy-div">
+        <p><a href="">Privacy policy</a></p>
+        <p>|</p>
+        <p><a href="">Terms of use</a></p>
+    </div>
+    <div class="copyright-div">ONDC | Open Network for Digital Commerce © 2024</div>
+    <div class="social-icons-div">
+        <a href="https://www.linkedin.com/company/open-network-for-digital-commerce" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="/images/linkedin.png" alt="linkedin"></a>
+        <a href="https://www.instagram.com/ondc_official/" target="_blank" rel="noopener" aria-label="Instagram"><img src="/images/instagram.png" alt="instagram"></a>
+        <a href="https://www.youtube.com/@ondc1300" target="_blank" rel="noopener" aria-label="Youtube"><img src="/images/youtube.png" alt="youtube"></a>
+        <a href="https://www.facebook.com/pages/category/Nonprofit-organization/ONDC-Ltd-103148322189702/" target="_blank" rel="noopener" aria-label="Facebook"><img src="/images/facebook.png" alt="facebook"></a>       
+        <a href="https://twitter.com/ONDC_Official" target="_blank" rel="noopener" aria-label="Twitter"><img src="/images/twitter.png" alt="twitter"></a> 
+        <a href="https://www.kooapp.com/profile/OpenNetworkForDigitalCommerce" target="_blank" rel="noopener" aria-label="Kooapp"><img src="/images/kooapp.png" alt="kooapp"></a>
+    </div>
+</div>
+
+
+<script src="https://kit.fontawesome.com/85a73f991c.js" crossorigin="anonymous" wfd-invisible="true"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script> 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        // Function to animate the count
+        function animateCount($element, start, end, duration, suffix = '') {
+            $({ count: start }).animate({ count: end }, {
+                duration: duration,
+                easing: 'swing',
+                step: function () {
+                    $element.text(Math.floor(this.count) + suffix);
+                },
+                complete: function () {
+                    $element.text(end + suffix); // Ensure the final number is displayed with the suffix
+                }
+            });
+        }
+
+        // Fetch data from count.json
+        $.getJSON('/json/pramaan_home_count.json', function(data) {
+            const countData = data[0]; // Accessing the first object in the array
+
+            // Define the elements and their final numbers with suffixes based on JSON data
+            animateCount($('.count').eq(0), 0, parseInt(countData.unique_subscriber_ids), 2000, '+');   // Unique Subscriber IDs
+            animateCount($('.count').eq(1), 0, parseInt(countData.categories_tested), 2000, '+');        // Categories tested
+            animateCount($('.count').eq(2), 0, parseInt(countData.flows_tested), 2000, '+');             // Flows tested
+            animateCount($('.count').eq(3), 0, parseInt(countData.tests_executed), 2000, 'M+');          // Tests executed (4M+)
+        });
+    });
+</script>
 </body>
 </html>
