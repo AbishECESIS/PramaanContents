@@ -70,6 +70,12 @@
 .gui-acc-tab.active{
     border-color: #1c75bc;
 }
+.gui-acc-tab-cnt{
+    display: none;
+}
+.gui-acc-tab-cnt.active{
+    display: block;
+}
 
 
 @media (max-width:1400px) {
