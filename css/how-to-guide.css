@@ -51,7 +51,7 @@
 }
 #guideaccordion .accordion-body .gui-acc-cnt{
     color: #838383 !important;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
     line-height: 26px;
 }
 .gui-acc-tab-div{
@@ -75,6 +75,14 @@
 }
 .gui-acc-tab-cnt.active{
     display: block;
+}
+.gui-acc-tab-cnt span{
+    color: #838383 !important;
+    margin-bottom: 10px;
+    line-height: 26px;
+}
+.gui-acc-tab-cnt ul{
+    margin-left: 20px;
 }
 
 
