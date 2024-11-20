@@ -55,6 +55,9 @@
     font-size: 14px !important;
     padding: 20px;
 }
+.tsp-res-table thead td:first-child{
+    min-width: 4rem;
+}
 .tsp-res-table td{
     padding: 20px;
 }
@@ -167,6 +170,9 @@
     }
     .tsp-tbl-note-div{
         margin-bottom: 35px;
+    }
+    .tsp-res-table thead td:first-child{
+        min-width: 2rem;
     }
 }
 @media (max-width:375px) {

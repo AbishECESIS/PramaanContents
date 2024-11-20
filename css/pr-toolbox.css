@@ -124,10 +124,10 @@ button:focus:not(:focus-visible){
     top: 50%;
     background-size: 13px;
 }
-#headingOne .accordion-button span{
+#headingOne .accordion-button .total-cat-count-div{
     display: none;
 }
-#headingOne .accordion-button.collapsed span{
+#headingOne .accordion-button.collapsed .total-cat-count-div{
     display: block;
     text-align: center;
     margin: auto;
@@ -327,7 +327,20 @@ button:focus:not(:focus-visible){
 .star.selected {
     color: gold;
 }
-
+.rating-submit-btn{
+    background: #1c75bc;
+    display: block;
+    width: fit-content;
+    padding: 10px;
+    opacity: 1;
+    color: white;
+    margin: 10px auto 0 auto;
+    border: 2px solid #1c75bc;
+}
+.rating-submit-btn:hover{
+    background-color: white;
+    color: #1c75bc;
+}
 
 @media (max-width:1400px) {
     .display-cat-main-div .cat-icon-div{
@@ -350,7 +363,7 @@ button:focus:not(:focus-visible){
         font-size: 23px !important;
         padding: 10px 0;
     }
-    #headingOne .accordion-button.collapsed span{
+    #headingOne .accordion-button.collapsed .total-cat-count-div{
         font-size: 15px;
     }
     .white-label-cnt{
@@ -393,7 +406,7 @@ button:focus:not(:focus-visible){
     .display-cat-main-div .cat-icon-div{
         width: 12.4rem;
     }
-    #headingOne .accordion-button.collapsed span{
+    #headingOne .accordion-button.collapsed .total-cat-count-div{
         font-weight: 500;
     }
     .domains-section .accordion-button {

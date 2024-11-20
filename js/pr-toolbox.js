@@ -4,6 +4,9 @@ let dataSetOrgToolbox = dataSetToolbox;  // Original dataset for Toolbox
 
 const displayItemsToolbox = (dataResSet) => {
     let categoryMap = {};
+    let totalCategories = 0;
+    let activeCategories = 0;
+    let inactiveCategories = 0;
 
     // Group categories under their respective titles
     dataResSet.forEach(element => {
@@ -14,9 +17,21 @@ const displayItemsToolbox = (dataResSet) => {
             category: element.category,
             status: element.status
         });
+
+        // Increment counters based on status
+        totalCategories++;
+        if (element.status.toLowerCase() === "active") {
+            activeCategories++;
+        } else if (element.status.toLowerCase() === "inactive") {
+            inactiveCategories++;
+        }
     });
 
     let html = '';
+    // Update the count in the specified class structure
+    document.querySelector('.total-cat-count-div .active-cat').textContent = activeCategories;
+    document.querySelector('.total-cat-count-div .total-cat').textContent = totalCategories;
+    
     for (const [cat_title, categories] of Object.entries(categoryMap)) {
         if (categories.length > 0) {
             html += `<p class="dis-cat-title">${cat_title}</p>`;
@@ -39,7 +54,7 @@ const displayItemsToolbox = (dataResSet) => {
 }
 
 function loadToolboxData() {
-    fetch('/json/pramaan_toolbox.json')
+    fetch('json/pramaan_toolbox.json')
         .then(response => response.json())
         .then(data => {
             dataSetToolbox = data;
@@ -79,8 +94,9 @@ const filterConditionsToolbox = (dataset, searchCriteria) => {
 // Input field selectors for Toolbox search
 var txtSearch4 = document.getElementById('cat-search');
 
+// Handle Enter key press for Toolbox section
 txtSearch4.addEventListener('keydown', (event) => {
-    if (event.key === 'Enter') {
+    if (event.keyCode === 13) {
         processSearchToolbox();
     }
 });
@@ -93,8 +109,11 @@ function Clearbtn(){
     loadToolboxData()
 }
 
-
-
+$('#toolbox-clear').click(function(){
+    var searchInput = document.getElementById('cat-search');
+    searchInput.value = "";
+    loadToolboxData()
+})
 
 // Rating functionality
 // Import Firebase libraries
@@ -125,6 +144,7 @@ document.querySelectorAll('.ut-rate-btn').forEach(button => {
     button.addEventListener('click', (e) => {
         currentItemId = e.currentTarget.getAttribute('data-item-id'); // Get item ID
         updateAverageRating();  // Load the current average rating for this item
+        clearAllStars();  // Clear star selection on modal open
     });
 });
 
@@ -139,8 +159,14 @@ document.querySelectorAll('.star').forEach(star => {
     });
 });
 
+// Clear all star selections
+function clearAllStars() {
+    document.querySelectorAll('.star').forEach(star => star.classList.remove('selected'));
+}
+
 // Highlight stars up to the given rating
 function highlightStars(rating) {
+    clearAllStars();  // Clear previous selections first
     document.querySelectorAll('.star').forEach(star => {
         star.classList.toggle('selected', parseInt(star.getAttribute('data-value')) <= rating);
     });
@@ -214,9 +240,3 @@ onSnapshot(ratingsRef, () => {
 
 // Initial load to display all average ratings on page load
 updateAllAverageRatings();
-
-
-
-
-
-

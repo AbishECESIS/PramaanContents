@@ -72,7 +72,12 @@
     {
         "cat_title": "Retail",
         "category": "Packaging Product - ONDC:RET1E",
-        "status": "deactive"
+        "status": "active"
+    },
+    {
+        "cat_title": "Logistics",
+        "category": "Logistics - nic2004:60232",
+        "status": "active"
     },
     {
         "cat_title": "Logistics",
@@ -87,12 +92,12 @@
     {
         "cat_title": "Agriculture",
         "category": "Agri Inputs - ONDC:AGR10",
-        "status": "active"
+        "status": "deactive"
     },
     {
         "cat_title": "Agriculture",
         "category": "Agri Outputs - ONDC:AGR11",
-        "status": "active"
+        "status": "deactive"
     },
     {
         "cat_title": "Financial Services",
@@ -102,7 +107,7 @@
     {
         "cat_title": "Financial Services",
         "category": "FASTag - ONDC:FIS11",
-        "status": "active"
+        "status": "deactive"
     },
     {
         "cat_title": "Financial Services",
@@ -130,14 +135,34 @@
         "status": "deactive"
     },
     {
+        "cat_title": "Mobility, Transportation & Travel",
+        "category": "Ride Hailing - ONDC:TRV10",
+        "status": "active"
+    },
+    {
+        "cat_title": "Mobility, Transportation & Travel",
+        "category": "Ticket(Unreserved) - ONDC:TRV11",
+        "status": "active"
+    },
+    {
+        "cat_title": "Mobility, Transportation & Travel",
+        "category": "Ticket(Reserved) - ONDC:TRV12",
+        "status": "active"
+    },
+    {
+        "cat_title": "Mobility, Transportation & Travel",
+        "category": "Accomodation Booking - ONDC:TRV13",
+        "status": "deactive"
+    },
+    {
         "cat_title": "Network Services",
         "category": "RSP - ONDC:NTS10",
-        "status": "active"
+        "status": "deactive"
     },
     {
         "cat_title": "Network Services",
         "category": "ODR - ONDC:NTS11",
-        "status": "active"
+        "status": "deactive"
     },
     {
         "cat_title": "ONEST",
@@ -162,17 +187,17 @@
     {
         "cat_title": "Services",
         "category": "Home Services - Appliance Repair Services - ONDC:SRV10",
-        "status": "active"
+        "status": "deactive"
     },
     {
         "cat_title": "Services",
         "category": "Home Services - Infra Services - ONDC:SRV11",
-        "status": "active"
+        "status": "deactive"
     },
     {
         "cat_title": "Services",
         "category": "Home Services - Personal Care Services - ONDC:SRV12",
-        "status": "active"
+        "status": "deactive"
     },
     {
         "cat_title": "Services",
@@ -202,27 +227,6 @@
     {
         "cat_title": "Services",
         "category": "Bids & Auction - ONDC:SRV18",
-        "status": "deactive"
-    },
-    
-    {
-        "cat_title": "Mobility",
-        "category": "Ride Hailing - ONDC:TRV10",
-        "status": "active"
-    },
-    {
-        "cat_title": "Mobility",
-        "category": "Ticket(Unreserved) - ONDC:TRV11",
-        "status": "active"
-    },
-    {
-        "cat_title": "Mobility",
-        "category": "Ticket(Reserved) - ONDC:TRV12",
-        "status": "active"
-    },
-    {
-        "cat_title": "Mobility",
-        "category": "Accomodation Booking - ONDC:TRV13",
         "status": "deactive"
     }
 ]

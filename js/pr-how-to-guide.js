@@ -80,7 +80,7 @@ const populateAccordion = (data) => {
 
 
 function loadAccordionData() {
-    fetch('/json/pramaan_how_to_guide.json')
+    fetch('json/pramaan_how_to_guide.json')
         .then(response => response.json())
         .then(data => {
             populateAccordion(data);

@@ -39,7 +39,7 @@ const displayItemsTSP = (dataResSet) => {
 }
 
 function loadTSPData() {
-    fetch('/json/pramaan_tsp.json')
+    fetch('json/pramaan_tsp.json')
         .then(response => response.json())
         .then(data => {
             data.sort((a, b) => a.name.localeCompare(b.name));
@@ -95,7 +95,7 @@ var txtSearch3 = document.getElementById('role');
 // Handle Enter key press for TSP section
 [txtSearch, txtSearch2, txtSearch3].forEach(input => {
     if (input) input.addEventListener('keydown', (event) => {
-        if (event.key === 'Enter') {
+        if (event.keyCode === 13) {
             processSearchTSP();
         }
     });

@@ -1,25 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="en"></html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pramaan - Toolbox</title>
     <link rel="preload" href="css/app.css" as="style" />
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />   
+    <link rel="stylesheet" type="text/css" href="/cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />   
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="/css/reset.min.css">
-    <link rel="stylesheet" href="/css/base_v1.css">
-    <link rel="stylesheet" href="/css/main.min.css"> 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="css/base_v1.css">
+    <link rel="stylesheet" href="css/main.min.css"> 
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href= "/css/custom.css">
-    <link rel="stylesheet" href= "/css/pramaan.css">
-    <link rel="stylesheet" href= "/css/pr-toolbox.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/pramaan.css">
+	<link rel="stylesheet" href="css/pr-toolbox.css">
 </head>
-<body> 
-<!-- Header Nav Bar -->
+<body>
+
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
@@ -31,19 +30,19 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav pr-menu-items">
         <li class="nav-item">
-          <p><a class="nav-link" href="/index.html">Home</a></p>
+          <p><a class="nav-link" aria-current="page" href="index.html">Home</a></p>
         </li>
         <li class="nav-item">
-          <p class="active"><a class="nav-link" aria-current="page" href="#">Toolbox</a></p>
+          <p class="active"><a class="nav-link" href="toolbox.html">Toolbox</a></p>
         </li>
         <li class="nav-item">
-          <p><a class="nav-link" href="/how-to-guide.html">How to guide?</a></p>
+          <p><a class="nav-link" href="how-to-guide.html">How to guide?</a></p>
         </li>
         <li class="nav-item">
-          <p><a class="nav-link" href="/find-tsp.html">Find TSPs</a></p>
+          <p><a class="nav-link" href="find-tsp.html">Find TSPs</a></p>
         </li>
         <li class="nav-item">
-          <p><a class="nav-link" href="/pr-videos.html">Videos</a></p>
+          <p><a class="nav-link" href="pr-videos.html">Videos</a></p>
         </li>
         <li class="nav-item">
           <p><a class="nav-link" href="#need-help">Need help</a></p>
@@ -53,31 +52,30 @@
   </div>
 </nav>
 
-<!-- Banner Section  -->
+
 <div class="tool-banner-section">
     <div class="container">
         <p class="to-bnr-title">Toolbox</p>
         <p class="to-bnr-cnt">A page to help you understand the different tools and utilities which you might use either to build / improve / test your software.</p>
     </div>
 </div>
-<!-- Sub Navigation Section  -->
+
 <div class="sub-nav-section">
     <div class="container">
-        <p><a href="/pramaan"><b>Home</b></a></p>
+        <p><a href="index.html"><b>Home</b></a></p>
         <p>></p>
         <p>Toolbox</p>
     </div>
 </div>
 
 
-<!-- Domains live Section  -->
 <div class="domains-section">
     <div class="container">
         <div class="accordion" id="accordionExample">
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingOne">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    Domains LIVE in Pramaan <span>22 out of 48 domains are LIVE on Pramaan</span>
+                    Domains LIVE in Pramaan <span class="total-cat-count-div"><span class="active-cat">22</span> out of <span class="total-cat">48</span> domains are LIVE on Pramaan</span>
                 </button>
                 </h2>
 
@@ -97,9 +95,9 @@
                         <div class="searchbox-main-div">
                             <div class="search-div">
                                 <input class="cat-search" type="text" name="cat-search" id="cat-search" placeholder="Search">
-                                <img class="search-icon" src="/images/search_icon.png" alt="Search" onclick="processSearchToolbox()">
+                                <img class="search-icon" src="images/search_icon.png" alt="Search" onclick="processSearchToolbox()">
                             </div>
-                            <button class="btn btn-secondary clear-btn" onclick="Clearbtn()">Clear</button>
+                            <button class="btn btn-secondary clear-btn" onclick="Clearbtn()" id="toolbox-clear">Clear</button>
                         </div>
                     </div>
                     <div class="display-cat-main-div" id="display-cat-main-div">
@@ -122,7 +120,7 @@
                 </div>
                 </div>
             </div>
-            <!-- Utilities and tools section -->
+         
             <div class="accordion-item ut-acc-item">
                 <h2 class="accordion-header" id="headingtwo" onclick="document.getElementById('headingOne').scrollIntoView({ behavior: 'smooth' });">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsetwo" aria-expanded="true" aria-controls="collapsetwo">
@@ -137,7 +135,7 @@
                             <p class="ut-ac-title">Signing and Verification</p>
                             <div class="rating-div" data-item-id="item1">
                                 <p class="item-rating">0.0/5</p>
-                                <img src="/images/rate_star.png" alt="Star">
+                                <img src="images/rate_star.png" alt="Star">
                             </div>                                                  
                         </div>
                         <p class="ut-ac-cnt">This tool is designed to support and aid ONDC Network Participants in constructing their own cryptocurrency libraries essential for engaging with the ONDC Network. It encompasses tasks such as key generation, signing, verification, encryption, and decryption.</p>
@@ -151,7 +149,7 @@
                             <p class="ut-ac-title">Subscription Utility</p>
                             <div class="rating-div" data-item-id="item2">
                                 <p class="item-rating">0.0/5</p>
-                                <img src="/images/rate_star.png" alt="Star">
+                                <img src="images/rate_star.png" alt="Star">
                             </div>                                                  
                         </div>
                         <p class="ut-ac-cnt">This tool aids ONDC Network Participants during the subscription process for the registry (Staging, Pre Prod, Prod). It includes the implementation of the /on_subscribe API in both NodeJS and Python.</p>
@@ -165,7 +163,7 @@
                             <p class="ut-ac-title">Retail/IGM log verification utility</p>
                             <div class="rating-div" data-item-id="item3">
                                 <p class="item-rating">0.0/5</p>
-                                <img src="/images/rate_star.png" alt="Star">
+                                <img src="images/rate_star.png" alt="Star">
                             </div>                                                  
                         </div>
                         <p class="ut-ac-cnt">This tool is designed for ONDC Network Participants to verify their transaction logs related to the Retail and IGM use cases on their end, ensuring accuracy before submission to the ONDC team for technical clearance.</p>
@@ -179,7 +177,7 @@
                             <p class="ut-ac-title">B2B/Logistics Log Verification</p>
                             <div class="rating-div" data-item-id="item4">
                                 <p class="item-rating">0.0/5</p>
-                                <img src="/images/rate_star.png" alt="Star">
+                                <img src="images/rate_star.png" alt="Star">
                             </div>                                                  
                         </div>
                         <p class="ut-ac-cnt">This tool is designed for ONDC Network Participants to verify their transaction logs related to the B2B and Logistics use cases on their end, ensuring accuracy before submission to the ONDC team for technical clearance.</p>
@@ -193,7 +191,7 @@
                             <p class="ut-ac-title">vLookup</p>
                             <div class="rating-div" data-item-id="item5">
                                 <p class="item-rating">0.0/5</p>
-                                <img src="/images/rate_star.png" alt="Star">
+                                <img src="images/rate_star.png" alt="Star">
                             </div>                                                  
                         </div>
                         <p class="ut-ac-cnt">This tool is developed to perform a registry lookup and retrieve details related to Network Participants (NP).</p>
@@ -207,7 +205,7 @@
                             <p class="ut-ac-title">RSF Mock Server</p>
                             <div class="rating-div" data-item-id="item6">
                                 <p class="item-rating">0.0/5</p>
-                                <img src="/images/rate_star.png" alt="Star">
+                                <img src="images/rate_star.png" alt="Star">
                             </div>                                                  
                         </div>
                         <p class="ut-ac-cnt">The RSF Mock Server is a tool specifically designed to test network integration for Reconciliation and Settlement Framework (RSF), based on ONDC model implementation.</p>
@@ -221,7 +219,7 @@
                             <p class="ut-ac-title">Sandbox</p>
                             <div class="rating-div" data-item-id="item7">
                                 <p class="item-rating">0.0/5</p>
-                                <img src="/images/rate_star.png" alt="Star">
+                                <img src="images/rate_star.png" alt="Star">
                             </div>                                                  
                         </div>
                         <p class="ut-ac-cnt">This sandbox specifically designed to test network integration for various domains - B2B Retail, Services, B2C Exports, B2B Logistics based on ONDC model implementations.</p>
@@ -233,7 +231,7 @@
                 </div>
                 </div>
             </div>
-            <!-- white Label Section  -->
+        
             <div class="accordion-item ut-acc-item white-label-section">
                 <h2 class="accordion-header" id="headingthree" onclick="document.getElementById('headingtwo').scrollIntoView({ behavior: 'smooth' });">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsethree" aria-expanded="true" aria-controls="collapsethree">
@@ -249,7 +247,7 @@
                             <p class="ut-ac-title">1. White label buyer app</p>
                             <div class="rating-div" data-item-id="item8">
                                 <p class="item-rating">0.0/5</p>
-                                <img src="/images/rate_star.png" alt="Star">
+                                <img src="images/rate_star.png" alt="Star">
                             </div>                                                 
                         </div>
                         <ul class="whi-ac-cnt-ul">
@@ -271,7 +269,7 @@
                             <p class="ut-ac-title">2. White label Seller app</p>
                             <div class="rating-div" data-item-id="item9">
                                 <p class="item-rating">0.0/5</p>
-                                <img src="/images/rate_star.png" alt="Star">
+                                <img src="images/rate_star.png" alt="Star">
                             </div>                                                 
                         </div>
                         <ul class="whi-ac-cnt-ul">
@@ -293,7 +291,7 @@
                             <p class="ut-ac-title">3. White label Logistics Seller app</p>
                             <div class="rating-div" data-item-id="item10">
                                 <p class="item-rating">0.0/5</p>
-                                <img src="/images/rate_star.png" alt="Star">
+                                <img src="images/rate_star.png" alt="Star">
                             </div>                                                 
                         </div>
                         <ul class="whi-ac-cnt-ul">
@@ -317,248 +315,6 @@
     </div>
 </div>
 
-<!-- Utilities and tools section -->
-<!-- <div class="ut-section">
-    <div class="container">
-        <p class="why-pr-title ut-title">Other ONDC Utilities and Tools</p>
-        <div class="accordion" id="accordionExample2">
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="heading3">
-                <button class="accordion-button" type="button">
-                    <p class="ut-ac-title">Signing and Verification</p>
-                    <div class="rating-div">
-                        <p class="item-rating">0.0/5</p>
-                        <img src="/images/rate_star.png" alt="Star">
-                    </div>
-                </button>
-                </h2>
-                <div>
-                <div class="accordion-body">
-                    <p class="ut-ac-cnt">This tool is designed to support and aid ONDC Network Participants in constructing their own cryptocurrency libraries essential for engaging with the ONDC Network. It encompasses tasks such as key generation, signing, verification, encryption, and decryption.</p>
-                    <div class="ut-ac-cnt-btn-div">
-                        <button class="btn ut-learn-btn">Learn more</button>
-                        <button class="btn ut-rate-btn">Rate Utility</button>
-                    </div>
-                </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="heading4">
-                <button class="accordion-button collapsed" type="button">
-                    <p class="ut-ac-title">Subscription Utility</p>
-                    <div class="rating-div">
-                        <p class="item-rating">0.0/5</p>
-                        <img src="/images/rate_star.png" alt="Star">
-                    </div>
-                </button>
-                </h2>
-                <div>
-                <div class="accordion-body">
-                    <p class="ut-ac-cnt">This tool aids ONDC Network Participants during the subscription process for the registry (Staging, Pre Prod, Prod). It includes the implementation of the /on_subscribe API in both NodeJS and Python.</p>
-                    <div class="ut-ac-cnt-btn-div">
-                        <button class="btn ut-learn-btn">Learn more</button>
-                        <button class="btn ut-rate-btn">Rate Utility</button>
-                    </div>
-                </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="heading5">
-                <button class="accordion-button collapsed" type="button">
-                    <p class="ut-ac-title">Retail/IGM log verification utility</p>
-                    <div class="rating-div">
-                        <p class="item-rating">0.0/5</p>
-                        <img src="/images/rate_star.png" alt="Star">
-                    </div>
-                </button>
-                </h2>
-                <div>
-                <div class="accordion-body">
-                    <p class="ut-ac-cnt">This tool is designed for ONDC Network Participants to verify their transaction logs related to the Retail and IGM use cases on their end, ensuring accuracy before submission to the ONDC team for technical clearance.</p>
-                    <div class="ut-ac-cnt-btn-div">
-                        <button class="btn ut-learn-btn">Learn more</button>
-                        <button class="btn ut-rate-btn">Rate Utility</button>
-                    </div>
-                </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="heading6">
-                <button class="accordion-button collapsed" type="button">
-                    <p class="ut-ac-title">B2B/Logistics Log Verification</p>
-                    <div class="rating-div">
-                        <p class="item-rating">0.0/5</p>
-                        <img src="/images/rate_star.png" alt="Star">
-                    </div>
-                </button>
-                </h2>
-                <div>
-                <div class="accordion-body">
-                        <p class="ut-ac-cnt">This tool is designed for ONDC Network Participants to verify their transaction logs related to the B2B and Logistics use cases on their end, ensuring accuracy before submission to the ONDC team for technical clearance.</p>
-                    <div class="ut-ac-cnt-btn-div">
-                        <button class="btn ut-learn-btn">Learn more</button>
-                        <button class="btn ut-rate-btn">Rate Utility</button>
-                    </div>
-                </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="heading7">
-                <button class="accordion-button collapsed">
-                    <p class="ut-ac-title">vLookup</p>
-                    <div class="rating-div">
-                        <p class="item-rating">0.0/5</p>
-                        <img src="/images/rate_star.png" alt="Star">
-                    </div>
-                </button>
-                </h2>
-                <div>
-                <div class="accordion-body">
-                    <p class="ut-ac-cnt">This tool is developed to perform a registry lookup and retrieve details related to Network Participants (NP).</p>
-                    <div class="ut-ac-cnt-btn-div">
-                        <button class="btn ut-learn-btn">Learn more</button>
-                        <button class="btn ut-rate-btn">Rate Utility</button>
-                    </div>
-                </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="heading8">
-                <button class="accordion-button collapsed" type="button">
-                    <p class="ut-ac-title">RSF Mock Server</p>
-                    <div class="rating-div">
-                        <p class="item-rating">0.0/5</p>
-                        <img src="/images/rate_star.png" alt="Star">
-                    </div>
-                </button>
-                </h2>
-                <div>
-                <div class="accordion-body">
-                    <p class="ut-ac-cnt">The RSF Mock Server is a tool specifically designed to test network integration for Reconciliation and Settlement Framework (RSF), based on ONDC model implementation.</p>
-                    <div class="ut-ac-cnt-btn-div">
-                        <button class="btn ut-learn-btn">Learn more</button>
-                        <button class="btn ut-rate-btn">Rate Utility</button>
-                    </div>
-                </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="heading9">
-                <button class="accordion-button collapsed" type="button">
-                    <p class="ut-ac-title">Sandbox</p>
-                    <div class="rating-div">
-                        <p class="item-rating">0.0/5</p>
-                        <img src="/images/rate_star.png" alt="Star">
-                    </div>
-                </button>
-                </h2>
-                <div>
-                <div class="accordion-body">
-                    <p class="ut-ac-cnt">This sandbox specifically designed to test network integration for various domains - B2B Retail, Services, B2C Exports, B2B Logistics based on ONDC model implementations.</p>
-                    <div class="ut-ac-cnt-btn-div">
-                        <button class="btn ut-learn-btn">Learn more</button>
-                        <button class="btn ut-rate-btn">Rate Utility</button>
-                    </div>
-                </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
-
-
-<!-- white Label Section  -->
-<!-- <div class="white-label-section ut-section">
-    <div class="container">
-        <p class="why-pr-title ut-title">White Label Reference App</p>
-        <div class="accordion" id="accordionExample3">
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="heading10">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10" aria-expanded="true" aria-controls="collapse10">
-                    <p class="ut-ac-title">1. White label buyer app</p>
-                    <div class="rating-div">
-                        <p class="item-rating">0.0/5</p>
-                        <img src="/images/rate_star.png" alt="Star">
-                    </div>
-                </button>
-                </h2>
-                <div id="collapse10" class="accordion-collapse collapse show" aria-labelledby="heading10" data-bs-parent="#accordionExample3">
-                <div class="accordion-body">
-                    <ul class="whi-ac-cnt-ul">
-                        <li><p>Staging - <a href="https://ref-app-buyer-staging-v2.ondc.org" target="_blank">https://ref-app-buyer-staging-v2.ondc.org</a></p></li>
-                        <li><p>Preprod - <a href="https://buyer-app-preprod-v2.ondc.org" target="_blank">https://buyer-app-preprod-v2.ondc.org</a></p></li>
-                        <li><p>GitHub repo link - <a href="https://github.com/ONDC-Official/ondc-sdk" target="_blank">https://github.com/ONDC-Official/ondc-sdk</a></p></li>
-                    </ul>
-                    <div class="whi-ac-anch-div">
-                        <a href="" target="_blank">Links to access buyer app</a>
-                        <a href="" target="_blank">User Manual</a>
-                    </div>
-                    <div class="ut-ac-cnt-btn-div">
-                        <button class="btn ut-learn-btn">Learn more</button>
-                        <button class="btn ut-rate-btn">Rate Utility</button>
-                    </div>
-                </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="heading11">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse11" aria-expanded="false" aria-controls="collapse11">
-                    <p class="ut-ac-title">2. White label Seller app</p>
-                    <div class="rating-div">
-                        <p class="item-rating">0.0/5</p>
-                        <img src="/images/rate_star.png" alt="Star">
-                    </div>
-                </button>
-                </h2>
-                <div id="collapse11" class="accordion-collapse collapse" aria-labelledby="heading11" data-bs-parent="#accordionExample3">
-                <div class="accordion-body">
-                    <ul class="whi-ac-cnt-ul">
-                        <li><p>Staging - <a href="https://ref-app-buyer-staging-v2.ondc.org" target="_blank">https://ref-app-buyer-staging-v2.ondc.org</a></p></li>
-                        <li><p>Preprod - <a href="https://buyer-app-preprod-v2.ondc.org" target="_blank">https://buyer-app-preprod-v2.ondc.org</a></p></li>
-                        <li><p>GitHub repo link - <a href="https://github.com/ONDC-Official/ondc-sdk" target="_blank">https://github.com/ONDC-Official/ondc-sdk</a></p></li>
-                    </ul>
-                    <div class="whi-ac-anch-div">
-                        <a href="" target="_blank">Links to access buyer app</a>
-                        <a href="" target="_blank">User Manual</a>
-                    </div>
-                    <div class="ut-ac-cnt-btn-div">
-                        <button class="btn ut-learn-btn">Learn more</button>
-                        <button class="btn ut-rate-btn">Rate Utility</button>
-                    </div>
-                </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="heading12">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse12" aria-expanded="false" aria-controls="collapse12">
-                    <p class="ut-ac-title">3. White label Logistics Seller app</p>
-                    <div class="rating-div">
-                        <p class="item-rating">0.0/5</p>
-                        <img src="/images/rate_star.png" alt="Star">
-                    </div>
-                </button>
-                </h2>
-                <div id="collapse12" class="accordion-collapse collapse" aria-labelledby="heading12" data-bs-parent="#accordionExample3">
-                <div class="accordion-body">
-                    <ul class="whi-ac-cnt-ul">
-                        <li><p>Staging - <a href="https://ref-app-buyer-staging-v2.ondc.org" target="_blank">https://ref-app-buyer-staging-v2.ondc.org</a></p></li>
-                        <li><p>Preprod - <a href="https://buyer-app-preprod-v2.ondc.org" target="_blank">https://buyer-app-preprod-v2.ondc.org</a></p></li>
-                        <li><p>GitHub repo link - <a href="https://github.com/ONDC-Official/ondc-sdk" target="_blank">https://github.com/ONDC-Official/ondc-sdk</a></p></li>
-                    </ul>
-                    <div class="whi-ac-anch-div">
-                        <a href="" target="_blank">Links to access buyer app</a>
-                        <a href="" target="_blank">User Manual</a>
-                    </div>
-                    <div class="ut-ac-cnt-btn-div">
-                        <button class="btn ut-learn-btn">Learn more</button>
-                        <button class="btn ut-rate-btn">Rate Utility</button>
-                    </div>
-                </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
 
 
 <!-- rating popup -->
@@ -578,13 +334,14 @@
                 <span class="star" data-value="5">★</span>
             </div>
             <div class="average-rating"><p>Average Rating:</p> <p class="avg" id="avg">0</p></div>
+            <button type="button" class="btn-close rating-submit-btn" data-bs-dismiss="modal" aria-label="Close">Submit</button>
         </div>
       </div>
     </div>
 </div>
 
+<p class="count" id="cat-count"></p>
 
-<!-- Footer Section  -->
 <div class="pr-footer-section" id="need-help">
     <div class="container">
         <p class="pr-footer-title">Need Help</p>
@@ -592,7 +349,7 @@
             <div class="mb-4 mb-sm-0 col-sm-4 col-md-4">
                 <p class="pr-f-main-cnt"><b>Slack Channel:</b></p>
                 <p class="pr-f-sub-cnt">Join our Slack channel: #ext-pramaan-qa</p>
-                <button class="join-btn btn">Join Now</button>
+                <button class="join-btn btn" onclick="window.open('https://portal.ondc.org/user-confirmation','_blank')">Join Now</button>
             </div>
             <div class="mb-4 mb-sm-0 col-sm-4 col-md-4">
                 <p class="pr-f-main-cnt"><b>Email Support</b></p>
@@ -613,44 +370,22 @@
     </div>
     <div class="copyright-div">ONDC | Open Network for Digital Commerce © 2024</div>
     <div class="social-icons-div">
-        <a href="https://www.linkedin.com/company/open-network-for-digital-commerce" target="_blank" rel="noopener" aria-label="LinkedIn"></a><img src="/images/linkedin.png" alt="linkedin"></a>
-        <a href="https://www.instagram.com/ondc_official/" target="_blank" rel="noopener" aria-label="Instagram"><img src="/images/instagram.png" alt="instagram"></a>
-        <a href="https://www.youtube.com/@ondc1300" target="_blank" rel="noopener" aria-label="Youtube"><img src="/images/youtube.png" alt="youtube"></a>
-        <a href="https://www.facebook.com/pages/category/Nonprofit-organization/ONDC-Ltd-103148322189702/" target="_blank" rel="noopener" aria-label="Facebook"><img src="/images/facebook.png" alt="facebook"></a>       
-        <a href="https://twitter.com/ONDC_Official" target="_blank" rel="noopener" aria-label="Twitter"><img src="/images/twitter.png" alt="twitter"></a> 
-        <a href="https://www.kooapp.com/profile/OpenNetworkForDigitalCommerce" target="_blank" rel="noopener" aria-label="Kooapp"><img src="/images/kooapp.png" alt="kooapp"></a>
+        <a href="https://www.linkedin.com/company/open-network-for-digital-commerce" target="_blank" rel="noopener" aria-label="LinkedIn"></a><img src="images/linkedin.png" alt="linkedin"></a>
+        <a href="https://www.instagram.com/ondc_official/" target="_blank" rel="noopener" aria-label="Instagram"><img src="images/instagram.png" alt="instagram"></a>
+        <a href="https://www.youtube.com/@ondc1300" target="_blank" rel="noopener" aria-label="Youtube"><img src="images/youtube.png" alt="youtube"></a>
+        <a href="https://www.facebook.com/pages/category/Nonprofit-organization/ONDC-Ltd-103148322189702/" target="_blank" rel="noopener" aria-label="Facebook"><img src="images/facebook.png" alt="facebook"></a>       
+        <a href="https://twitter.com/ONDC_Official" target="_blank" rel="noopener" aria-label="Twitter"><img src="images/twitter.png" alt="twitter"></a> 
+        <a href="https://www.kooapp.com/profile/OpenNetworkForDigitalCommerce" target="_blank" rel="noopener" aria-label="Kooapp"><img src="images/kooapp.png" alt="kooapp"></a>
     </div>
 </div>
 
+
 <script src="https://kit.fontawesome.com/85a73f991c.js" crossorigin="anonymous" wfd-invisible="true"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="code.jquery.com/jquery-1.11.0.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script> 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script type="module" src= "/js/pr-toolbox.js"></script>
-<script>
-    $(document).ready(function() {
-        // Handle star selection
-        $('.star').on('click', function() {
-        const ratingValue = $(this).data('value');
-        $('.star').removeClass('selected'); // Clear previous selections
-        $(this).addClass('selected'); // Add selected class to the clicked star
-        $(this).prevAll('.star').addClass('selected'); // Add selected class to all previous stars
-        });
 
-        // Handle button click to submit rating
-        $('.ut-rate-btn').on('click', function() {
-        // Here you can handle the submission of the rating
-        const selectedRating = $('.star.selected').length; // Get number of selected stars
-        console.log(`Rating submitted: ${selectedRating} stars`);
-
-        // Clear the selected stars
-        $('.star').removeClass('selected'); // Remove the selected class from all stars
-        });
-    });
-</script>
-</script>
+<script type="module" src="js/pr-toolbox.js"></script>
 </body>
 </html>
-

@@ -1,3 +1,8 @@
+/* Banner Section  */
+.to-bnr-title{
+    padding-bottom: 10px;
+}
+
 /* Videos Section  */
 .list-of-videos-section {
     margin-top: 20px;
@@ -16,11 +21,15 @@
 }
 .vid-thump{
     margin-bottom: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow: hidden;
 }
 .vid-thump img{
     width: 100%;
     border-radius: 10px;
     cursor: pointer;
+    max-height: 210px;
 }
 .vid-title{
     font-weight: 600;
